@@ -10,6 +10,6 @@ export const getPokemon = () => dispatch => {
         .get('https://pokeapi.co/api/v2/pokemon')
         .then(res => {
             console.log(res);
-            dispatch({ type: GET_POKEMON_SUCCESS, payload: res.data})
+            dispatch({ type: GET_POKEMON_SUCCESS, payload: res.data.results })
         });
 }

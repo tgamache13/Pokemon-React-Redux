@@ -17,11 +17,11 @@ export const reducer = (state = initialState, action) => {
                 isGetting: true,
             }
         case GET_POKEMON_SUCCESS:
-            const pokemon = [];
+            
             return {
                 ...state,
                 isGetting: false,
-                pokemon: pokemon
+                pokemon: action.payload
             }
         default:
             return state;
